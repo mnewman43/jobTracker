@@ -7,7 +7,7 @@ import './App.css'
 function Calendar() {
     return(
         <div>
-            <p>Calendar</p>
+            <h3>Calendar</h3>
         </div>
     )
 }

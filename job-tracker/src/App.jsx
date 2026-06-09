@@ -6,8 +6,10 @@ import './App.css'
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Layout from './Layout.jsx'
+import HomePage from './HomePage.jsx'
 import JobList from './JobList.jsx'
 import Calendar from './Calendar.jsx'
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -16,7 +18,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout/>}>
-          <Route index element={<JobList/>}/>
+          <Route index element={<HomePage/>}/>
+          <Route path="joblist" element={<JobList/>}/>
           <Route path="calendar" element={<Calendar/>}/>
         </Route>
       </Routes>

@@ -7,7 +7,7 @@ import './App.css'
 function JobList() {
     return(
         <div>
-            <p>JobList</p>
+            <h3>Job List</h3>
         </div>
     )
 }
