@@ -209,8 +209,10 @@ ul  {
 .list ul {
   padding: 0px;
   margin: 10px 50px;
+  overflow: hidden;
 }
-.list li  {
+
+.jobButton  {
   padding: 10px;
   display: block;
   border-style: solid;
@@ -219,4 +221,24 @@ ul  {
   border-radius: 10px;
   margin: 4px 0px;
   text-align: left;
+}
+.jobButton:hover  {
+  background-color: #1c1d23;
+}
+
+button  {
+  margin: 10px;
+  padding: 4px 10px;
+ background-color: rgb(96, 96, 197);
+ border-style: none;
+ border-radius: 4px;
+}
+button:hover {
+  background-color: rgb(24, 155, 204);
+}
+
+.delete {
+  background-color: rgb(207, 36, 36);
+  float: right;
+  margin: auto;
 }

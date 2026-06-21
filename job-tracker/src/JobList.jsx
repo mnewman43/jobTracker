@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Job from './job.jsx'
 
 function JobList() {
     const [open, setOpen] = useState(false);
@@ -29,7 +30,11 @@ function JobList() {
         setJobEmployer("");
         setJobTitle("");
         setJobSalary(0);
-        setJobSalaryType(hour);
+        setJobSalaryType("");
+    }
+
+    function handleRemoveJob(index) {
+        setJobs(j => j.filter((_, i) => i !== index));
     }
 
     function handleEmployerChange(event) {
@@ -79,8 +84,9 @@ function JobList() {
                 <ul>
                     {jobs.map((job, index) => 
                         <li key={index}>
-                            {job.employer} - {job.title}
-                            , ${job.salary}/{job.salaryType}
+                            <Job employer={job.employer} title={job.title}
+                            salary={job.salary} salaryType={job.salaryType}
+                            delete={() => handleRemoveJob(index)}/>
                         </li>,)}
                 </ul>
             </div>
