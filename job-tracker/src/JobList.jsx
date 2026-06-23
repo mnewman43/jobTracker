@@ -17,13 +17,15 @@ function JobList() {
     const[jobTitle, setJobTitle] = useState("");
     const[jobSalary, setJobSalary] = useState(0);
     const[jobSalaryType, setJobSalaryType] = useState("");
+    const[dateSubmitted, setDateSubmitted] = useState(new Date().toLocaleDateString());
 
     function handleAddJob() {
         const newJob = {
             employer: jobEmployer,
             title: jobTitle,
             salary: jobSalary,
-            salaryType: jobSalaryType
+            salaryType: jobSalaryType,
+            dateSubmit: dateSubmitted
         };
         setJobs(j => [...j, newJob]);
 
@@ -31,6 +33,7 @@ function JobList() {
         setJobTitle("");
         setJobSalary(0);
         setJobSalaryType("");
+        setDateSubmitted(new Date().toLocaleDateString());
     }
 
     function handleRemoveJob(index) {
@@ -86,6 +89,7 @@ function JobList() {
                         <li key={index}>
                             <Job employer={job.employer} title={job.title}
                             salary={job.salary} salaryType={job.salaryType}
+                            dateSubmit={job.dateSubmit}
                             delete={() => handleRemoveJob(index)}/>
                         </li>,)}
                 </ul>

@@ -225,6 +225,9 @@ ul  {
 .jobButton:hover  {
   background-color: #1c1d23;
 }
+.jobButton h3 {
+  padding: 0px;
+}
 
 button  {
   margin: 10px;

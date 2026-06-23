@@ -13,11 +13,12 @@ function Job(props) {
 
     return (
         <div>
-            <a className="jobButton" onClick={toggle}>{props.employer} - {props.title}<br/>
+            <a className="jobButton" onClick={toggle}><h3>{props.employer} - {props.title}</h3><br/>
                 {open &&
                     <div>
                         <p>
-                            ${props.salary}/{props.salaryType}
+                            ${props.salary}/{props.salaryType} <br/>
+                            Applied on: {props.dateSubmit}
                             <button className="delete" onClick={props.delete}>
                                 Remove Job
                             </button>
