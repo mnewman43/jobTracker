@@ -1,7 +1,4 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.css'
 import Job from './job.jsx'
 
@@ -15,7 +12,7 @@ function JobList() {
     const[jobs, setJobs] = useState([]);
     const[jobEmployer, setJobEmployer] = useState("");
     const[jobTitle, setJobTitle] = useState("");
-    const[jobSalary, setJobSalary] = useState(0);
+    const[jobSalary, setJobSalary] = useState("Pay unknown");
     const[jobSalaryType, setJobSalaryType] = useState("");
     const[dateSubmitted, setDateSubmitted] = useState(new Date().toLocaleDateString());
 
@@ -31,7 +28,7 @@ function JobList() {
 
         setJobEmployer("");
         setJobTitle("");
-        setJobSalary(0);
+        setJobSalary("Pay unknown");
         setJobSalaryType("");
         setDateSubmitted(new Date().toLocaleDateString());
     }
